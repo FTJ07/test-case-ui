@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { Col, Row } from "antd";
+import { PlusCircleOutlined } from "@ant-design/icons";
+import { Button } from "antd";
+import { Typography } from 'antd';
+
+const { Paragraph } = Typography;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Row>
+      <Col span={6}>
+        <div className="flex justify-between">
+        <Paragraph>Modules</Paragraph>
+          <Button className="bg-[grey]" icon={<PlusCircleOutlined />} />
+        </div>
+      </Col>
+      <Col span={18}>col-12</Col>
+    </Row>
   );
 }
 
